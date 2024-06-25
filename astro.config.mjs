@@ -3,16 +3,22 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "hybrid",
+  output: "server",
   adapter: cloudflare(),
   experimental: {
     env: {
       schema: {
-        PUBLIC_API_URL: envField.string({
+        PUBLIC_KEY: envField.string({
           context: "client",
           access: "public",
           startsWith: "http",
-          optional: false,
+          optional: true,
+        }),
+        SECRET_KEY: envField.string({
+          context: "server",
+          access: "secret",
+          startsWith: "http",
+          optional: true,
         }),
       },
     },
