@@ -1,0 +1,8 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "stllink"
+compatibility_date = "2024-05-02"
+pages_build_output_dir = "./dist"
+
+
+[vars]
+PUBLIC_API_URL = "https://stllink.pages.dev"
