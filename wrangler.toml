@@ -5,4 +5,4 @@ pages_build_output_dir = "./dist"
 
 
 [vars]
-PUBLIC_API_URL = "https://stllink.pages.dev"
+PUBLIC_KEY = "http//Public"
